@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f0fdfd, #f5f7ff);
+      color: #1e293b;
+      display: flex;
+    }
+
+    /* Sidebar */
+    nav {
+      width: 240px;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #008080, #004080);
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 35px 20px;
+      box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+      border-radius: 0 20px 20px 0;
+    }
+
+    nav h1 {
+      font-size: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 14px 0;
+      padding: 10px 14px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateX(5px);
+    }
+
+    /* Content */
+    .content {
+      margin-left: 240px;
+      width: calc(100% - 240px);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #e6f9f7, #eef4ff);
+      border-bottom: 2px solid #dbeafe;
+    }
+
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #008080;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    .hero h2 {
+      margin-top: 20px;
+      font-size: 28px;
+      color: #004080;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #334155;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 35px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    section:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+    }
+
+    section h3 {
+      margin-bottom: 15px;
+      color: #008080;
+      text-transform: uppercase;
+      font-size: 18px;
+      letter-spacing: 1px;
+      border-left: 4px solid #008080;
+      padding-left: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #008080, #004080);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      border-radius: 20px;
+      margin-top: 30px;
+    }
+
+    .social-links {
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: #008080;
+      margin: 0 10px;
+      font-size: 22px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.3);
+      color: #004080;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        width: 200px;
+      }
+      .content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      nav h1 {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      nav a {
+        margin: 6px;
+      }
+      .content {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav>
+    <h1>Bangaoil Myra Alilis</h1>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#hobbies"><i class="fas fa-heart"></i> Hobbies</a>
+    <a href="#skills"><i class="fas fa-lightbulb"></i> Skills</a>
+    <a href="#talent"><i class="fas fa-star"></i> Talent</a>
+    <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="hero">
+      <img src="myra.jfif" alt="Profile">
+      <h2>Jessa Alloy</h2>
+      <p>IT Student</p>
+    </div>
+
+    <div class="container">
+      <section id="about">
+        <h3>About Me</h3>
+        <p>I'm <strong>Bangaoil Myra Alilis</strong>, 21 years old from Brgy. Poblacion, Alilem, Ilocos Sur.  
+        I'm single and a Roman Catholic.</p>
+      </section>
+
+      <section id="hobbies">
+        <h3>Hobbies</h3>
+        <ul>
+          <li>Watching K-Drama</li>
+          <li>Joking (Manlait 😅)</li>
+          <li>Playing Basketball & Badminton</li>
+          <li>Playing with cousins</li>
+        </ul>
+      </section>
+
+      <section id="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>Time Management</li>
+          <li>Good Communication</li>
+        </ul>
+      </section>
+
+      <section id="talent">
+        <h3>Talent</h3>
+        <ul>
+          <li>Dancing</li>
+          <li>Singing</li>
+          <li>Painting</li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h3>Education</h3>
+        <ul>
+          <li>Poblacion Alilem Central School</li>
+          <li>ISPSC Tagudin Campus (BSIT)</li>
+        </ul>
+      </section>
+
+      <section id="achievements">
+        <h3>Achievements</h3>
+        <ul>
+          <li>Various Small Awards</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="contact">
+        <h3>Contact</h3>
+        <p><strong>Email:</strong> bangaoilmyraalilis@gmail.com</p>
+        <p><strong>Phone:</strong> 09358719369</p>
+        
+        <div class="social-links">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </section>
+
+      <!-- Footer aligned with sections -->
+      <footer>
+        &copy; 2025 All Rights Reserved
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
